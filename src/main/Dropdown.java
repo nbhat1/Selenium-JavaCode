@@ -1,6 +1,8 @@
 package main;
 
-import org.openqa.selenium.*;
+import org.apache.xpath.SourceTree;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -8,10 +10,9 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
 /**
- * Created by neeraj.bhatnagar on 12/29/2016.
+ * Created by neeraj.bhatnagar on 1/2/2017.
  */
-public class DropDown {
-
+public class Dropdown {
     public static void main(String[] args) {
         System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\GecoDriver\\geckodriver.exe");
         WebDriver driver = new FirefoxDriver();
@@ -23,13 +24,14 @@ public class DropDown {
         //select.selectByVisibleText("Dansk");
         //select.selectByValue("hi");
 
-      List<WebElement> options =  select.getOptions();
+        List<WebElement> options =  select.getOptions();
         System.out.println(options.size());
         //System.out.println(options.);
-       // int i;
+        // int i;
         for(int i = 0; i<=options.size(); i++){
             System.out.println(options.get(i).getText());
+            System.out.println();
 
-        driver.close();
-    }
-} }
+            driver.close();
+        }
+    } }

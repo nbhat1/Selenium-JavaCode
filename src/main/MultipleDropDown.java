@@ -9,16 +9,16 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
 /**
- * Created by neeraj.bhatnagar on 12/30/2016.
+ * Created by neeraj.bhatnagar on 1/2/2017.
  */
 public class MultipleDropDown {
-    public static void main(String[] args) {
-        System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\GecoDriver\\geckodriver.exe");
-        WebDriver driver = new FirefoxDriver();
-        driver.get("http://www.wikipedia.org");
+        public static void main(String[] args) {
+            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\GecoDriver\\geckodriver.exe");
+            WebDriver driver = new FirefoxDriver();
+            driver.get("http://www.wikipedia.org");
 
-        Select select = new Select(driver.findElement(By.xpath(".//*[@id='searchLanguage']")));
-        System.out.println("************************Printing All Dropdown values****************************************");
+            Select select = new Select(driver.findElement(By.xpath(".//*[@id='searchLanguage']")));
+            System.out.println("************************Printing All main.Dropdown values****************************************");
           /*List<WebElement> options = driver.findElements(By.tagName("option"));
         System.out.println("Size of list is" + "" + options.size()+ "" + "Elements");
         for(int i = 0; i<options.size(); i++) {
@@ -34,7 +34,7 @@ public class MultipleDropDown {
                 System.out.println(links.get(j).getAttribute("href"));
                 System.out.println(links.get(j).getText());
             }
-        System.out.println("*********************Total Links are**************** " + "" + links.size());
+            System.out.println("*********************Total Links are**************** " + "" + links.size());
 
         /*System.out.println("*********************************Print links from a block on webpage****************************");
         List<WebElement> block = driver.findElements(By.xpath("./*//*[@class='footer-sidebar-text']/ul"));
@@ -45,7 +45,8 @@ public class MultipleDropDown {
         }
         System.out.println("Total Links in block :" + "" + block.size());
 */
-        //driver.quit();
+            //driver.quit();
+        }
     }
-    }
+
 
