@@ -16,15 +16,12 @@ public class iFrameHandling {
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\ChromeDriver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("http://www.firstcry.com/");
-
         driver.switchTo().frame("iframe_Login");
         driver.findElement(By.xpath(".//*[@id='Email']")).sendKeys("neeraj.engg@gmail.com");
         driver.findElement(By.xpath(".//*[@id='Mobile']")).sendKeys("9865326598");
         //driver.switchTo().frame("iframe_Login");
         ((JavascriptExecutor)driver).executeScript("closelogin()"); //Call Java script to execute closelogin() method to close iframe
        // driver.findElement(By.xpath(".//*[@class='_pop_close _pop_reg_bg']")).click();
-
-
     }
 }
 
