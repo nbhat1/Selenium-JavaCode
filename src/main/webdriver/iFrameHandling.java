@@ -1,4 +1,4 @@
-package main;
+package main.webdriver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -20,6 +20,7 @@ public class iFrameHandling {
         driver.findElement(By.xpath(".//*[@id='Email']")).sendKeys("neeraj.engg@gmail.com");
         driver.findElement(By.xpath(".//*[@id='Mobile']")).sendKeys("9865326598");
         //driver.switchTo().frame("iframe_Login");
+        //Close frame using java script function closelogin() embedded in frame.
         ((JavascriptExecutor)driver).executeScript("closelogin()"); //Call Java script to execute closelogin() method to close iframe
        // driver.findElement(By.xpath(".//*[@class='_pop_close _pop_reg_bg']")).click();
     }

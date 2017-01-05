@@ -1,4 +1,4 @@
-package main;
+package main.webdriver;
 
 import org.apache.xpath.SourceTree;
 import org.openqa.selenium.By;
