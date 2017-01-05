@@ -1,4 +1,4 @@
-package main;
+package main.java.misc;
 
 /**
  * Created by neeraj.bhatnagar on 1/2/2017.
