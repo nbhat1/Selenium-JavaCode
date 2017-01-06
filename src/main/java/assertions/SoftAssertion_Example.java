@@ -21,6 +21,7 @@ public class SoftAssertion_Example {
         SoftAssert assertion = new SoftAssert();
         try {
             String elementText1 = driver.findElement(By.xpath(".//*[@id='contact-link']/a")).getText();
+            //String elementText4 = driver.findElement(By.xpath(".//*[@id='contact-link']/a")).clickAt;
             System.out.println("First String is " + ""+ elementText1);
             assertion.assertEquals(elementText1,"Contact us1", "String does not match");
         }catch(Exception e){
