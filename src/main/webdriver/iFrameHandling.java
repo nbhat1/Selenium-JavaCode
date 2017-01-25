@@ -22,7 +22,7 @@ public class iFrameHandling {
         //driver.switchTo().frame("iframe_Login");
         //Close frame using java script function closelogin() embedded in frame.
         ((JavascriptExecutor)driver).executeScript("closelogin()"); //Call Java script to execute closelogin() method to close iframe
-       // driver.findElement(By.xpath(".//*[@class='_pop_close _pop_reg_bg']")).click();
+        // driver.findElement(By.xpath(".//*[@class='_pop_close _pop_reg_bg']")).click();
+        // driver.switchTo().defaultContent(); will move focus to main window.
     }
 }
-

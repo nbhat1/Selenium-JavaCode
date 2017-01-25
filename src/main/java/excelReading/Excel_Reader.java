@@ -72,9 +72,9 @@ public class Excel_Reader  {
         try {
             int sheetIndex = workBook.getSheetIndex(sheetName); // Index of sheet to be worked upon.
             sheet = workBook.getSheetAt(sheetIndex);           // Get Sheet.
-            row = sheet.getRow(0);
+            XSSFRow row = sheet.getRow(0);
             row = sheet.getRow(rowNum - 1);
-            cell = row.getCell(colNum);
+            XSSFCell cell = row.getCell(colNum);
             if (cell.getCellType() == Cell.CELL_TYPE_STRING) {
                 return cell.getStringCellValue();
             } else if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
@@ -119,6 +119,7 @@ public class Excel_Reader  {
                 return row.getLastCellNum();
             }
         } catch (Exception e) {
+
             e.printStackTrace();
 
         }
