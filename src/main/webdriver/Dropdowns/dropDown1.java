@@ -19,8 +19,6 @@ public class dropDown1 {
         WebDriver driver = new FirefoxDriver();
         driver.get("https://www.wikipedia.org/");
 
-
-
     }
 }
 

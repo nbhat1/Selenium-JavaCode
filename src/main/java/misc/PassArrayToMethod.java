@@ -17,8 +17,7 @@ public class PassArrayToMethod {
 		// TODO Auto-generated method stub
 		for(int i=0;i<myArray.length;i++){
 			System.out.println(myArray[i]);
-			
-		
+
 	}
 	}
 }
