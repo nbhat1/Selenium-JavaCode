@@ -1,4 +1,4 @@
-package main.webdriver;
+package main.webdriver.mousehover;
 
 import java.util.concurrent.TimeUnit;
 

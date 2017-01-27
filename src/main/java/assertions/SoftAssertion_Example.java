@@ -4,8 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
+import static main.webdriver.TestSample.driver;
 
 
 /**
@@ -13,10 +17,22 @@ import org.testng.asserts.SoftAssert;
  */
 public class SoftAssertion_Example {
 
+    WebDriver driver;
+
+    @BeforeClass
+    public void setUp(){
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\ChromeDriver\\chromedriver.exe");
+        driver = new ChromeDriver();
+    }
+
+    @AfterClass
+    public void tearDown(){
+        driver.quit();
+    }
+
     @Test
     public void softAssert(){
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\ChromeDriver\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+
         driver.get("http://automationpractice.com/index.php");
         SoftAssert assertion = new SoftAssert();
         try {

@@ -27,30 +27,22 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-*/
-/**
- * Created by neeraj.bhatnagar on 1/16/2017.
- *//*
-
 public class dataProviderCodeFromRavi {
 
         public WebDriver driver;
         public WebDriverWait wait;
         String appURL = "https://www.gmail.com";
 
-        private By byEmail = By.xpath("/*/
-/*[@id='Email']");
-        private By bynext =  By.xpath("/*/
-/*[@id='next']");
+        private By byEmail = By.xpath("/[@id='Email']");
+        private By bynext =  By.xpath("/[@id='next']");
         private By byPassword = By.xpath("//input[@id='Passwd']");
         private By bySubmit = By.id("signIn");
         public static String pathh = "C:/Test.xlsx";
 
         @BeforeClass
         public void setup(){
-                                */
-/*System.setProperty("webdriver.chrome.driver","C:\\driver\\geckodriver.exe");
-                                driver = new FirefoxDriver();*//*
+System.setProperty("webdriver.chrome.driver","C:\\driver\\geckodriver.exe");
+                                driver = new FirefoxDriver();
 
             System.setProperty("webdriver.chrome.driver","C:\\driver\\chromedriver.exe");
             driver = new ChromeDriver();
@@ -66,8 +58,7 @@ public class dataProviderCodeFromRavi {
 
         @Test(dataProvider="empLogin")
         public void VerifyLogin(String userName, String password) throws InterruptedException {
-        */
-/*driver.navigate().to(appURL);*//*
+            driver.navigate().to(appURL);
 
             driver.navigate().to("https://accounts.google.com/");
             driver.findElement(byEmail).sendKeys(userName);
@@ -81,8 +72,7 @@ public class dataProviderCodeFromRavi {
             //Check for error message
         }
 
-   */
-/* @Test(dataProvider="empLogin")
+ @Test(dataProvider="empLogin")
     public void VerifyInvalidLogin1(String userName, String password) throws InterruptedException {
         driver.navigate().to(appURL);
                 driver.navigate().to("https://accounts.google.com/");
@@ -95,7 +85,7 @@ public class dataProviderCodeFromRavi {
         driver.findElement(bySubmit).click();
 
         //Check for error message
-    } *//*
+    }
 
 
         @DataProvider(name="empLogin")

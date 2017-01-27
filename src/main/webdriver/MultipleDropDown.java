@@ -18,7 +18,7 @@ public class MultipleDropDown {
             driver.get("http://www.wikipedia.org");
 
             Select select = new Select(driver.findElement(By.xpath(".//*[@id='searchLanguage']")));
-            System.out.println("************************Printing All main.webdriver.Dropdown values****************************************");
+            System.out.println("************************Printing All main.webdriver.Dropdowns values****************************************");
           /*List<WebElement> options = driver.findElements(By.tagName("option"));
         System.out.println("Size of list is" + "" + options.size()+ "" + "Elements");
         for(int i = 0; i<options.size(); i++) {
